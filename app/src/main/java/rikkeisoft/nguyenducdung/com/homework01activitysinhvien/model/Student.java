@@ -1,11 +1,11 @@
-package rikkeisoft.nguyenducdung.com.homework01activitysinhvien;
+package rikkeisoft.nguyenducdung.com.homework01activitysinhvien.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Student implements Parcelable {
 
-    private String name, address, birthday, sex, class1, khoaHoc;
+    private String name, address, birthday, sex, classes, course;
 
     public Student() {
     }
@@ -54,29 +54,29 @@ public class Student implements Parcelable {
         this.sex = sex;
     }
 
-    public String getClass1() {
-        return class1;
+    public String getClasses() {
+        return classes;
     }
 
-    public void setClass1(String class1) {
-        this.class1 = class1;
+    public void setClasses(String classes) {
+        this.classes = classes;
     }
 
-    public String getKhoaHoc() {
-        return khoaHoc;
+    public String getCourse() {
+        return course;
     }
 
-    public void setKhoaHoc(String khoaHoc) {
-        this.khoaHoc = khoaHoc;
+    public void setCourse(String course) {
+        this.course = course;
     }
 
     private Student(Parcel input){
         name = input.readString();
         address = input.readString();
         birthday = input.readString();
-        class1 = input.readString();
+        classes = input.readString();
         sex = input.readString();
-        khoaHoc = input.readString();
+        course = input.readString();
 
     }
 
@@ -90,8 +90,8 @@ public class Student implements Parcelable {
         dest.writeString(name);
         dest.writeString(address);
         dest.writeString(birthday);
-        dest.writeString(class1);
+        dest.writeString(classes);
         dest.writeString(sex);
-        dest.writeString(khoaHoc);
+        dest.writeString(course);
     }
 }
